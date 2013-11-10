@@ -3,7 +3,6 @@ var express = require('express')
 , user = require('./routes/user')
 , http = require('http')
 , path = require('path')
-, User = require('./user_model')
 // , payPal = require('./config.json')
 , mongoose = require('mongoose');
 // , fs = require('fs');
@@ -38,9 +37,45 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// routes.hompage = function(req, res){
+//   http.get('http://api.kivaws.org/v1/loans/newest.json',function(res) {
+//     console.log("statusCode: ", res.statusCode);
+//     console.log("headers: ", res.headers);
+//   }).on('error', function(e) {
+//     console.log("Got error: " + e.message);
+//   });
+// }
+
 
 app.get('/', routes.index);
-app.get('/homepage', routes.homepage);
+app.get('/homepage', express.bodyParser(), function(req, res){
+  var url = 'http://api.kivaws.org/v1/loans/newest.json';
+
+http.get(url, function(res) {
+    var body = '';
+
+    res.on('data', function(chunk) {
+        body += chunk;
+    });
+
+    res.on('end', function() {
+        var list = JSON.parse(body);
+        for(var x in list.loans){
+          app.locals({ 
+            names: list.loans[x].name,
+            use: list.loans[x].use,
+            country: list.loans[x].location.country
+            });
+        }
+        console.log(app.locals)
+    });
+}).on('error', function(e) {
+      console.log("Got error: ", e);
+});
+    res.render("homepage.jade", {
+        locals: {data: req.body, title: "Team Member Information"}
+    });
+});
 app.get('/borrowers', routes.borrowers);
 app.get('/profile',routes.profile);
 app.get('/register',routes.register);
