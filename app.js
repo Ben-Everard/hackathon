@@ -8,7 +8,7 @@ var express = require('express')
 
 var app = express();
 
-var connStr = 'mongodb://localhost:27017/charity';
+var connStr = 'mongodb://localhost/charity';
 mongoose.connect(connStr, function(err) {
     if (err) throw err;
     console.log('Successfully connected to MongoDB');
@@ -40,29 +40,15 @@ routes.postsignin = function(req, res){
     // if (!req.user) {
 
       var registerUser = new User({
-        // name: user.name,
         email: req.body.email,
         password: req.body.password
         });
         registerUser.save(function(err) {
-          console.log(registerUser)
-            if (err) throw err;
-              registerUser.find({ email: user.email }, function(err, user) {
-                if (err) throw err;
-                // test a matching password
-                registeruser.comparePassword(user.password, function(err, isMatch) {
-                    if (err) throw err;
-                    console.log(user.password, isMatch); // -> Password123: true
-            });
-          });
+          if(err) throw err;
+          console.log(registerUser);
+          res.redirect('/');
         });
       }
-      // else
-      // {
-      //   res.redirect('/');
-      // }
-    // });
-  // }
 }
 
 app.get('/', routes.index);
