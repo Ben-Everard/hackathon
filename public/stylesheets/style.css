@@ -1,8 +1,23 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.home{
+	height: 200px;
+}
+
+.media-body{
+	padding-left: 25px;
+}
+
+.borrowers{
+	height: 370px;
+}
+
+.lender{
+	height: 200px;
 }

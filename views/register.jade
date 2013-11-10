@@ -4,7 +4,7 @@ block content
   
   body
     .container
-      .register.well.col-md-6
+      .register.well.col-md-6.col-md-offset-3
         form(role='form')
           .form-group.col-md-6
             label(for='Username') Username
@@ -24,5 +24,5 @@ block content
           .form-group.col-md-6
             label(for='Confirmpassword') Confirm Password
             input#Confirmpassword.form-control(type='Confirmpassword', placeholder='Confirm Password')
-          p
-            a.btn.btn-primary.col-md-3(href='#', role='button') Register
+          .form-group.col-md-6
+            input.form-control(type='submit', value='Register')
