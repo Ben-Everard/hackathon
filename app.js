@@ -43,6 +43,7 @@ app.get('/', routes.index);
 app.get('/borrowers', routes.borrowers);
 app.get('/profile',routes.profile);
 app.get('/register',routes.register);
+app.get('/homepage',routes.homepage)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
