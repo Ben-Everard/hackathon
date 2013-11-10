@@ -14,6 +14,7 @@ var app = express();
 //     console.log('Successfully connected to MongoDB');
 // });
 
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -40,29 +41,15 @@ routes.postsignin = function(req, res){
     // if (!req.user) {
 
       var registerUser = new User({
-        // name: user.name,
         email: req.body.email,
         password: req.body.password
         });
         registerUser.save(function(err) {
-          console.log(registerUser)
-            if (err) throw err;
-              registerUser.find({ email: user.email }, function(err, user) {
-                if (err) throw err;
-                // test a matching password
-                registeruser.comparePassword(user.password, function(err, isMatch) {
-                    if (err) throw err;
-                    console.log(user.password, isMatch); // -> Password123: true
-            });
-          });
+          if(err) throw err;
+          console.log(registerUser);
+          res.redirect('/');
         });
       }
-      // else
-      // {
-      //   res.redirect('/');
-      // }
-    // });
-  // }
 }
 
 app.get('/', routes.index);
