@@ -1,0 +1,44 @@
+html
+  head
+    title
+    link(rel='stylesheet', type='text/css', href='assets/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='assets/css/charity.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    link(rel='stylesheet', type='text/css', href='assets/js/bootstrap.min.js')
+  header
+    nav.navbar.navbar-inverse(role='navigation')
+      h1.pull-left
+        a(href='') CHARITY
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.pull-right
+          li.pull-right
+            a(href='') Register
+  body
+    .container
+      .register.well.col-md-6
+        form(role='form')
+          .form-group.col-md-6
+            label(for='Username') Username
+            input#Username.form-control(type='Username', placeholder='Username')
+          form(role='form')
+            .form-group.col-md-6
+              label(for='Email') Email
+              input#Email.form-control(type='Email', placeholder='Email')
+            form(role='form')
+              .form-group.col-md-6
+                label(for='Firstname') First Name
+                input#Firstname.form-control(type='First Name', placeholder='First Name')
+              form(role='form')
+                .form-group.col-md-6
+                  label(for='Lastname') Last Name
+                  input#LastName.form-control(type='Last Name', placeholder='Last Name')
+                form(role='form')
+                  .form-group.col-md-6
+                    label(for='Password') Password
+                    input#Password.form-control(type='Password', placeholder='Password')
+                  form(role='form')
+                    .form-group.col-md-6
+                      label(for='Confirmpassword') Confirm Password
+                      input#Confirmpassword.form-control(type='Confirmpassword', placeholder='Confirm Password')
+                    p
+                      a.btn.btn-primary.col-md-3(href='#', role='button') Register

@@ -1,0 +1,52 @@
+html
+  head
+    title
+    link(rel='stylesheet', type='text/css', href='assets/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='assets/css/charity.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    link(rel='stylesheet', type='text/css', href='assets/js/bootstrap.min.js')
+  header
+    nav.navbar.navbar-inverse(role='navigation')
+      h1.pull-left
+        a(href='') CHARITY
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.pull-right
+          li.pull-right
+            a(href='') Register
+  body
+    .container
+      .micro.col-md-7
+        .col-md-11
+          .thumbnail
+            a.pull-left(href='#')
+              img.media-object(src='http://placedog.com/150/150', alt='')
+            .caption
+              .media-body
+                h2.media-heading Need Goats
+                .alert.alert-success
+                  p $1000 Goal
+                .progress.progress-striped
+                  .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%;')
+                    span.sr-only 40% Complete (success)
+                p.
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores deserunt nihil ipsum. Harum, animi dignissimos perferendis tempore a illo et eligendi reprehenderit labore aspernatur reiciendis sit beatae quidem dolore inventore!
+    .well.col-md-4
+      a.pull-left(href='#')
+        img.media-object(src='http://placedog.com/100/100', alt='')
+      .caption
+        .media-body
+          h4.media-heading Sell milk
+          .alert.alert-success
+            p $1000 Goal
+          p
+            a.btn.btn-primary(href='#', role='button') Button
+    .well.col-md-4
+      a.pull-left(href='#')
+        img.media-object(src='http://placedog.com/100/100', alt='')
+      .caption
+        .media-body
+          h4.media-heading Sell milk
+          .alert.alert-success
+            p $1000 Goal
+          p
+            a.btn.btn-primary(href='#', role='button') Button
