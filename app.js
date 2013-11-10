@@ -40,6 +40,7 @@ if ('development' == app.get('env')) {
 
 
 app.get('/', routes.index);
+app.get('/homepage', routes.homepage);
 app.get('/borrowers', routes.borrowers);
 app.get('/profile',routes.profile);
 app.get('/register',routes.register);
