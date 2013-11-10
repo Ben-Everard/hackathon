@@ -4,22 +4,20 @@ block content
  
   body
     .container
-      .row
-        .log.well.well-lg.col-md-4
-          form(role='form')
-            .form-group.col-md-6
+        .log.well.well-lg.col-md-3
+          .h3 Login
+          form.form-horizontal(role='form')
+            .form-group.col-md-12
               label(for='Username') Username
               input#Username.form-control(type='Username', placeholder='Username')
-            form(role='form')
-              .form-group.col-md-6
-                label(for='Password') Password
-                input#Password.form-control(type='Password', placeholder='Password')
-              p
-                a.btn.btn-primary.col-md-offset-1(href='#', role='button') Button
-        .micro.col-md-7.col-md-offset-1
+            .form-group.col-md-12
+              label(for='Password') Password
+              input#Password.form-control(type='Password', placeholder='Password')
+            .form-group.col-md-6
+              input.form-control(type='submit', value='Login')
+        .micro.col-md-6.col-md-offset-2
           .col-md-11
             .thumbnail
-              img(data-src='holder.js/300x200', alt='')
               .caption
                 h3 Change for microfinance
                 p 13% of humanity lives on less than $1 a day
@@ -28,17 +26,17 @@ block content
                 p lend your change to one on our partners and make change with change
                 p
                   a.btn.btn-primary(href='#', role='button') Button
-      .bottom
-        .row
-          .home.well.well-lg.col-md-4
-            h4 1.Round Up
-            p
-              | We partner with your credit card company and round up your purchase to the nearest dollar and acumalate the change untill you reach a $25 goal.
-          .home.well.well-lg.col-md-4
-            h4 2.Loan through Kiva
-            p
-              | Pay it foward and put your goal to a good cause by microloaning it to a Kiva borrower in return when he reaches his goal your goal will be paid back to you in Kiva credits.
-          .home.well.well-lg.col-md-4
-            h4 3.Satisfaction
-            p
-              | After recieving Kiva credits one can repeat the process, donate to Kiva, or exchange it back on to your credit card.
+        .bottom
+          .row
+            .home.well.well-lg.col-md-3
+              h4 1.Round Up
+              p
+                | We partner with your credit card company and round up your purchase to the nearest dollar and acumalate the change untill you reach a $25 goal.
+            .home.well.well-lg.col-md-3.col-md-offset-1
+              h4 2.Loan through Kiva
+              p
+                | Pay it foward and put your goal to a good cause by microloaning it to a Kiva borrower in return when he reaches his goal your goal will be paid back to you in Kiva credits.
+            .home.well.well-lg.col-md-3.col-md-offset-1
+              h4 3.Satisfaction
+              p
+                | After recieving Kiva credits one can repeat the process, donate to Kiva, or exchange it back on to your credit card.
