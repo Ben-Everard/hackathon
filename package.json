@@ -12,7 +12,9 @@
     "nodemailer": "0.5.2",
     "mongoose": "3.6",
     "flashify": "0.1.2",
-    "bcrypt": "0.7.7"
+    "bcrypt": "0.7.7",
+    "paypal-rest-sdk": "~0.6.4",
+    "oauth":"0.9.10"
   },
   "devDependencies": {
     "nodemon": "*"

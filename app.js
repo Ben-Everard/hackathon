@@ -1,18 +1,24 @@
 var express = require('express')
-, mongoose = require('mongoose')
 , routes = require('./routes')
 , user = require('./routes/user')
 , http = require('http')
 , path = require('path')
-, User = require('./user_model');
+, User = require('./user_model')
+// , payPal = require('./config.json')
+, mongoose = require('mongoose');
+// , fs = require('fs');
 
 var app = express();
 
-// var connStr = 'mongodb://localhost:27017/charity';
-// mongoose.connect(connStr, function(err) {
-//     if (err) throw err;
-//     console.log('Successfully connected to MongoDB');
-// });
+// try {
+//   var configJSON = fs.readFileSync(__dirname + "/config.json");
+//   var config = JSON.parse(configJSON.toString());
+// } catch (e) {
+//   console.error("File congfig.json not found or is invalid "+ e.message);
+//   process.exit(1);
+// }
+
+// routes.init(config);
 
 
 // all environments
@@ -33,31 +39,10 @@ if ('development' == app.get('env')) {
 }
 
 
-routes.postsignin = function(req, res){
-  if(req.body.register === 'register'){
-  // User.find({email: user.email}, function (err, docs){
-    // req.user = docs[0];
-    console.log('Help');
-    // if (!req.user) {
-
-      var registerUser = new User({
-        email: req.body.email,
-        password: req.body.password
-        });
-        registerUser.save(function(err) {
-          if(err) throw err;
-          console.log(registerUser);
-          res.redirect('/');
-        });
-      }
-}
-
 app.get('/', routes.index);
-app.get('/homepage',routes.homepage);
 app.get('/borrowers', routes.borrowers);
 app.get('/profile',routes.profile);
 app.get('/register',routes.register);
-app.post('/', routes.postsignin);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

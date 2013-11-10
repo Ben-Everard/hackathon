@@ -1,10 +1,11 @@
-
+// var paypal = require('paypal-rest-sdk');
+// var config = {};
 /*
  * GET home page.
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index');
 };
 
 exports.homepage = function(req, res){
@@ -22,3 +23,12 @@ exports.profile = function(req, res){
 exports.register = function(req, res){
 	res.render('register')
 };
+
+/*
+ * GET PAYPAL SDK
+ */
+
+exports.init = function(c){
+  config = c;
+  paypal.configure(c.api);
+}
