@@ -1,5 +1,6 @@
 // var paypal = require('paypal-rest-sdk');
 // var config = {};
+var http = require('http');
 /*
  * GET home page.
  */
@@ -9,7 +10,7 @@ exports.index = function(req, res){
 };
 
 exports.homepage = function(req, res){
-	res.render('homepage')
+	res.render('homepage',{kiva: list})
 };
 
 exports.borrowers = function(req, res){

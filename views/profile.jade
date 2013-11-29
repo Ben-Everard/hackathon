@@ -4,38 +4,44 @@ block content
   
   body
     .container
-      .well.well-lg.col-md-4
+      .profile.col-md-6
           h4 User Profile
-          img(src='http://placedog.com/270/300', alt='')
-          .panel.panel-success.col-md-6
-            p TOTAL LENT
-          .panel.panel-info.col-md-5
-            p LOANS
-          p
-            a.btn.btn-primary(href='#', role='button') Button
-      .micro.col-md-6
-        .col-md-11
+          img(src='http://placedog.com/200/250', alt='')
+          h1 Name
           .lender.thumbnail
+            .credit
+                h5 ************9999
+                h5 Current Goal: $25.00 
+            a.btn.btn-primary.col-md-6(href='#', role='button') Goal Change
+
+          a.btn.btn-primary.col-md-4(href='#', role='button') Add Card
+
+        .row 
+          .lent.well.col-md-4
             a.pull-left(href='#')
               img.media-object(src='http://placedog.com/100/100', alt='')
             .caption
-              .media-body.col-md-offset-1
-                h4.media-heading Thank You 
-                .panel.panel-success.col-md-6
-                  p LENT
-                
-      .micro.col-md-6
-        .col-md-11
-          .lender.thumbnail
-            a.pull-left(href='#')
-              img.media-object(src='http://placedog.com/100/100', alt='')
-            .caption
-              .media-body.col-md-offset-1
-                h4.media-heading Thank You
-                .panel.panel-success.col-md-6
-                  p LENT
-      
+              .media-body
+                p= names
+                p= funded_amount
+                p= loan_amount
+                 .progress.progress-striped
+                  .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%;')
+                    span.sr-only 40% Complete (success)
+                p
+                  a.btn.btn-primary(href='#', role='button') Button
+          .row            
+            .lent.well.col-md-4
+              a.pull-left(href='#')
+                img.media-object(src='http://placedog.com/100/100', alt='')
+              .caption
+                .media-body
+                  p= names
+                  p= funded_amount
+                  p= loan_amount
+                   .progress.progress-striped
+                    .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%;')
+                      span.sr-only 40% Complete (success)
+                  p
+                    a.btn.btn-primary(href='#', role='button') Button
         
-          a.btn.btn-primary.col-md-6(href='#', role='button') Lend
-      
-          a.btn.btn-primary.col-md-6(href='#', role='button') Set parameters

@@ -7,7 +7,17 @@ a {
 }
 
 .home{
-	height: 200px;
+	margin: 15px;
+	height: 175px;
+	color: white;
+	padding-top: 25px;
+	margin-left: 50px;
+}
+
+.home1{
+	margin-left: 200px;
+	height: 175px;
+	color: white;
 }
 
 .media-body{
@@ -15,9 +25,50 @@ a {
 }
 
 .borrowers{
-	height: 370px;
+	height: 400px;
 }
 
 .lender{
 	height: 200px;
+	margin-top: 15px;
+}
+
+.bottom{
+	margin-left: 175px;
+}
+
+.homepage{
+	background-image:url("../images/field.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+
+.profile{
+	margin-right: 15px;
+	width: 400px;
+}
+
+.lent{
+	margin: 15px;
+	width: 300px;
+}
+
+.micro{
+	margin-top: 15px;
+}
+
+.lend{
+	margin: 15px;
+}
+
+#title{
+font-size: 25px;
+}
+
+.register{
+	margin-top: 25px;
+}
+
+.container{
+	padding-top: 100px;
 }

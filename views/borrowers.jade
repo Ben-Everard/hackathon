@@ -4,39 +4,51 @@ block content
 
   body
     .container
-      .col-md-6
-        .borrowers.thumbnail
-          a.pull-left(href='#')
-            img.media-object(src='http://placedog.com/150/150', alt='')
+      .col-md-5
+        .borrowers
+          img.media-object(src='http://placedog.com/150/150', alt='')
           .caption
             .media-body
-              h2.media-heading Need Goats
-              .alert.alert-success
-                p $1000 Goal
-              .progress.progress-striped
-                .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%;')
-                  span.sr-only 40% Complete (success)
-              p.
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores deserunt nihil ipsum. Harum, animi dignissimos perferendis tempore a illo et eligendi reprehenderit labore aspernatur reiciendis sit beatae quidem dolore inventore!
+                       h3= names
+                       h4= country
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%;')
+                        span.sr-only 40% Complete (success)
+                  h3= use
+                  h4= funded_amount
+                  h4= loan_amount
       .row            
-        .well.col-md-4
+        .lend.well.col-md-3
           a.pull-left(href='#')
-            img.media-object(src='http://placedog.com/100/100', alt='')
+            img.media-object(src='http://placedog.com/90/100', alt='')
           .caption
             .media-body
-              h4.media-heading Sell milk
-              .alert.alert-success
-                p $1000 Goal
-              p
+             p= use
+               p
                 a.btn.btn-primary(href='#', role='button') Button
-        .row            
-          .well.col-md-4
-            a.pull-left(href='#')
-              img.media-object(src='http://placedog.com/100/100', alt='')
-            .caption
-              .media-body
-                h4.media-heading Sell milk
-                .alert.alert-success
-                  p $1000 Goal
-                p
-                  a.btn.btn-primary(href='#', role='button') Button
+        .lend.well.col-md-3
+          a.pull-left(href='#')
+            img.media-object(src='http://placedog.com/90/100', alt='')
+          .caption
+            .media-body
+             p= use
+               p
+                a.btn.btn-primary(href='#', role='button') Button
+        .lend.well.col-md-3
+          a.pull-left(href='#')
+            img.media-object(src='http://placedog.com/90/100', alt='')
+          .caption
+            .media-body
+             p= use
+               p
+                a.btn.btn-primary(href='#', role='button') Button
+        .lend.well.col-md-3
+          a.pull-left(href='#')
+            img.media-object(src='http://placedog.com/90/100', alt='')
+          .caption
+            .media-body
+             p= use
+               p
+                a.btn.btn-primary(href='#', role='button') Button
+ 
+ 
